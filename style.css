@@ -1,0 +1,241 @@
+
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  text-align:center;
+}
+
+
+.umbrella {
+	position: absolute;
+	left: 10px;
+	top: -50px;
+	transition: left 1s ease;
+}
+
+.panel {
+position: absolute;
+background-color: #333;
+width:5px;
+height:120px;
+top:-50px;
+z-index:3;
+}
+
+/* .panel:before {
+content:"";
+position: absolute;
+top:20px;
+left:-1000000px;
+width:200px;
+height: 350px;
+background-color: #161a1d;
+opacity:0.1;
+transition: .2s ease;
+} */
+
+.panel:after {
+content:"";
+position: absolute;
+cursor: pointer;
+width: 200px;
+height:100px;
+border-radius: 100px 100px 0 0;
+background-color: #a4161a;
+box-shadow: inset 0 -10px #333, inset 50px -10px #ba181b, inset -50px -10px #ba181b;
+top:-75px;
+left:-97px;
+transition: .2s ease;
+transform-origin: top;
+}
+
+input#panel {
+display: none;
+}
+
+#panel:checked ~ .panel:after {
+transform: scaleX(0.2) scaleY(1.5);
+}
+
+#panel:checked + .panel:before {
+transform: scaleX(0.000001);
+opacity:0;
+}
+
+.stick {
+position: absolute;
+background-color: #333;
+width:5px;
+height:10px;
+border-radius: 20px 20px 0 0;
+top:-143px;
+left:0.5;
+z-index:5;
+}
+
+.stick:before {
+content:"";
+position: absolute;
+border-right: 7px solid #b1a7a6;
+border-bottom: 7px solid #b1a7a6;
+border-left:7px solid transparent;
+border-top:7px solid transparent;
+width:20px;
+height:20px;
+border-radius:50%;
+top:190px;
+left:-1px;
+transform: rotate(45deg);
+}
+
+.stick:after {
+content:"";
+position: absolute;
+width:7px;
+height:15px;
+background-color: #b1a7a6;
+top:195px;
+left:-1px;
+}
+
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg,
+.flag
+.elongate {
+    background-color:#1D7874;
+}
+
+.head { 
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+} 
+
+.head:hover {
+	width: 300px;
+    transition: 1s ease-in-out;
+}
+
+.upper_body { 
+	width: 300px; 
+	height: 150px;
+	display: flex; 
+    margin: 0 auto;
+} 
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+	top: 10px;
+} 
+
+.left_arm { 
+	margin: 5px; 
+	position: relative;
+    transition: 1s;
+} 
+
+.left_arm:hover {
+    transform: rotate(-110deg);
+}
+
+.right_arm {
+	margin: 5px;
+	position: relative;
+	transition: 1s;
+}
+
+.right_arm:hover {
+	transform: rotate(110deg);
+  }
+
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+} 
+
+.lower_body { 
+	width: 200px; 
+	height: 200px;
+	margin: 0 auto;
+
+} 
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 110px;
+	border-radius: 0 0 100px 100px; 
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+} 
+
+.left_leg:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+.right_leg { 
+	margin-left: 120px; 
+    margin-top: -110px;
+    transition: 1s;
+}
+
+.right_leg:hover {
+    transform: translate(10px, 10px);
+}
+
+.left_eye, .right_eye { 
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: white;  
+} 
+
+.elongate {
+	position: absolute;
+	left: 1130px;
+	width: 30px;
+	height: 20px;
+	border-radius: 50px 50px 50px 50px;
+	background-color: red;
+	transition: 0.5s;
+	overflow: hidden;
+	transform-origin: bottom left;
+  }
+  
+.elongate:hover {
+	width: 70px;
+	max-width: 110px;
+	transform:rotate(-35deg);
+}
+
+.left_eye { 
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+	position: relative; 
+	top: 100px; 
+	left: 40px; 
+} 
+
+.right_eye { 
+	position: relative; 
+	top: 80px; 
+	left: 120px; 
+}
